@@ -42,7 +42,6 @@
       color: inherit;
     }
 
-    /* MASTHEAD */
     .masthead {
       border-bottom: 3px double var(--rule-heavy);
       padding: 18px 60px;
@@ -69,6 +68,7 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
       font-weight: 400;
+      text-decoration: none;
     }
 
     .masthead-tag {
@@ -79,7 +79,6 @@
       text-transform: uppercase;
     }
 
-    /* HERO */
     .hero {
       padding: 80px 60px 60px;
       border-bottom: 1px solid var(--rule-heavy);
@@ -190,13 +189,13 @@
       font-size: 22px;
     }
 
-    .hero-actions {
+    .hero-actions,
+    .cta-buttons {
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
     }
 
-    /* BUTTONS */
     .btn-primary,
     .btn-secondary {
       display: inline-flex;
@@ -235,7 +234,6 @@
       transform: translateY(-2px);
     }
 
-    /* PULL QUOTE */
     .pull-quote-section {
       display: grid;
       grid-template-columns: 1fr 2px 1fr;
@@ -286,7 +284,6 @@
       font-weight: 500;
     }
 
-    /* SECTION HEADERS */
     .section-header {
       display: flex;
       align-items: center;
@@ -318,7 +315,6 @@
       background: var(--rule-heavy);
     }
 
-    /* NAV MODEL */
     .nav-model {
       padding: 72px 60px;
       border-bottom: 1px solid var(--rule-heavy);
@@ -363,7 +359,6 @@
       color: rgba(13,13,13,0.65);
     }
 
-    /* VOLUMES */
     .volumes-section {
       padding: 80px 60px;
       border-bottom: 1px solid var(--rule-heavy);
@@ -434,7 +429,6 @@
       opacity: 0.65;
     }
 
-    /* START */
     .start-section {
       padding: 80px 60px;
       border-bottom: 1px solid var(--rule-heavy);
@@ -503,7 +497,6 @@
       opacity: 0.65;
     }
 
-    /* CTA */
     .cta-section {
       padding: 100px 60px;
       text-align: center;
@@ -555,14 +548,6 @@
       margin: 0 auto 44px;
     }
 
-    .cta-buttons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    /* FOOTER */
     footer {
       padding: 40px 60px;
       display: flex;
@@ -585,6 +570,13 @@
       color: rgba(13,13,13,0.4);
       text-align: center;
       max-width: 760px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
     }
 
     .footer-link {
@@ -663,6 +655,10 @@
         flex-direction: column;
         text-align: center;
       }
+
+      .footer-links {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -670,7 +666,7 @@
 
   <header class="masthead">
     <span class="masthead-date">Est. 2026 · Vol. I–VI</span>
-    <span class="masthead-title">AI for Financial Professionals</span>
+    <a class="masthead-title" href="https://alexdibol.github.io/ai-self_teaching/" target="_blank" rel="noopener">AI for Financial Professionals</a>
     <span class="masthead-tag">Open Repositories · Open Access</span>
   </header>
 
@@ -703,8 +699,8 @@
     </div>
 
     <div class="hero-actions">
-      <a href="https://alexdibol.github.io/[COURSE-REALM]/" class="btn-primary" target="_blank" rel="noopener">Open Realm Landing Page →</a>
-      <a href="https://github.com/alexdibol/[COURSE-REPOSITORY]" class="btn-secondary" target="_blank" rel="noopener">Open Repository →</a>
+      <a href="https://alexdibol.github.io/ai-self_teaching/" class="btn-primary" target="_blank" rel="noopener">Open Realm Landing Page →</a>
+      <a href="https://github.com/alexdibol/ai-self_teaching" class="btn-secondary" target="_blank" rel="noopener">Open Repository →</a>
     </div>
   </section>
 
@@ -765,27 +761,27 @@
 
     <div class="volumes-grid">
 
-      <a class="volume-card" href="https://alexdibol.github.io/[AI-INFRASTRUCTURE-REALM]/" target="_blank" rel="noopener">
+      <a class="volume-card" href="https://github.com/alexdibol/books/releases/download/book-quant_quant_finance-v01/quant_quant_finance_v17092025.pdf" target="_blank" rel="noopener">
         <div class="volume-num">Volume I</div>
         <div class="volume-name">AI Infrastructure</div>
         <p class="volume-desc">GPU economics, compute constraints, and deployment architecture framed as strategic constraints for finance.</p>
         <div class="volume-links">
-          <span>Open landing page →</span>
-          <a href="https://github.com/alexdibol/[AI-INFRASTRUCTURE-REPO]" target="_blank" rel="noopener">Repository →</a>
+          <span>Open volume resource →</span>
+          <a href="https://github.com/alexdibol/books/releases/tag/book-ai_infrastructure_finance-v01" target="_blank" rel="noopener">Repository →</a>
         </div>
       </a>
 
-      <a class="volume-card" href="https://alexdibol.github.io/[AI-ML-101-REALM]/" target="_blank" rel="noopener">
+      <a class="volume-card" href="https://alexdibol.github.io/ai-101/" target="_blank" rel="noopener">
         <div class="volume-num">Volume II</div>
         <div class="volume-name">AI &amp; ML 101</div>
         <p class="volume-desc">Core architectures taught with synthetic data so the mechanisms remain visible and defensible.</p>
         <div class="volume-links">
           <span>Open landing page →</span>
-          <a href="https://github.com/alexdibol/[AI-ML-101-REPO]" target="_blank" rel="noopener">Repository →</a>
+          <a href="https://github.com/alexdibol/ai-101" target="_blank" rel="noopener">Repository →</a>
         </div>
       </a>
 
-      <a class="volume-card" href="https://alexdibol.github.io/[AI-PROMPTING-REALM]/" target="_blank" rel="noopener">
+      <a class="volume-card" href="https://alexdibol.github.io/ai-prompting/" target="_blank" rel="noopener">
         <div class="volume-num">Volume III</div>
         <div class="volume-name">Prompt Engineering as Governance</div>
         <p class="volume-desc">Prompts as governed contracts with schema enforcement, artifact generation, and fail-closed discipline.</p>
@@ -795,33 +791,33 @@
         </div>
       </a>
 
-      <a class="volume-card" href="https://alexdibol.github.io/[AI-AGENTS-REALM]/" target="_blank" rel="noopener">
+      <a class="volume-card" href="https://alexdibol.github.io/agents-handbook/" target="_blank" rel="noopener">
         <div class="volume-num">Volume IV</div>
         <div class="volume-name">AI Agents</div>
         <p class="volume-desc">Bounded agents, governed graphs, separated responsibilities, and reviewable workflow architecture.</p>
         <div class="volume-links">
           <span>Open landing page →</span>
-          <a href="https://github.com/alexdibol/[AI-AGENTS-REPO]" target="_blank" rel="noopener">Repository →</a>
+          <a href="https://github.com/alexdibol/agents-handbook" target="_blank" rel="noopener">Repository →</a>
         </div>
       </a>
 
-      <a class="volume-card" href="https://alexdibol.github.io/[GOVERNANCE-MATURITY-REALM]/" target="_blank" rel="noopener">
+      <a class="volume-card" href="https://alexdibol.github.io/ai-governance_first/" target="_blank" rel="noopener">
         <div class="volume-num">Volume V</div>
         <div class="volume-name">Governance Maturity</div>
         <p class="volume-desc">A maturity ladder for institutional AI adoption, from supervised use to enterprise operating models.</p>
         <div class="volume-links">
           <span>Open landing page →</span>
-          <a href="https://github.com/alexdibol/[GOVERNANCE-MATURITY-REPO]" target="_blank" rel="noopener">Repository →</a>
+          <a href="https://github.com/alexdibol/ai-governance_first" target="_blank" rel="noopener">Repository →</a>
         </div>
       </a>
 
-      <a class="volume-card" href="https://alexdibol.github.io/[MODERN-AI-REALM]/" target="_blank" rel="noopener">
+      <a class="volume-card" href="https://alexdibol.github.io/ai-governance_2026/" target="_blank" rel="noopener">
         <div class="volume-num">Volume VI</div>
         <div class="volume-name">Modern AI</div>
         <p class="volume-desc">Reasoning, long context, fine-tuning, surrogates, multimodal systems, Bayesian models, diffusion, and frontier topics.</p>
         <div class="volume-links">
           <span>Open landing page →</span>
-          <a href="https://github.com/alexdibol/[MODERN-AI-REPO]" target="_blank" rel="noopener">Repository →</a>
+          <a href="https://github.com/alexdibol/ai-governance_2026" target="_blank" rel="noopener">Repository →</a>
         </div>
       </a>
 
@@ -839,10 +835,10 @@
       <div class="start-step">
         <div class="step-num">1</div>
         <div class="step-title">If You Are New to AI</div>
-        <p class="step-body">Begin with the realm page for AI Infrastructure, then move into AI &amp; ML 101. Use the landing pages for orientation and the repositories for the working materials.</p>
+        <p class="step-body">Begin with Volume I and then move into AI &amp; ML 101. Use the introductory material for conceptual orientation and the repositories for the working assets.</p>
         <div class="step-links">
-          <a href="https://alexdibol.github.io/[AI-INFRASTRUCTURE-REALM]/" class="step-link" target="_blank" rel="noopener">Open Volume I landing page →</a>
-          <a href="https://github.com/alexdibol/[AI-INFRASTRUCTURE-REPO]" class="step-link" target="_blank" rel="noopener">Open repository →</a>
+          <a href="https://github.com/alexdibol/books/releases/download/book-quant_quant_finance-v01/quant_quant_finance_v17092025.pdf" class="step-link" target="_blank" rel="noopener">Open Volume I resource →</a>
+          <a href="https://github.com/alexdibol/books/releases/tag/book-ai_infrastructure_finance-v01" class="step-link" target="_blank" rel="noopener">Open repository →</a>
         </div>
       </div>
 
@@ -851,7 +847,7 @@
         <div class="step-title">If You Need Immediate Practical Value</div>
         <p class="step-body">Go to the Prompt Engineering realm first. That is the fastest route from conceptual uncertainty to governed, production-shaped workflows.</p>
         <div class="step-links">
-          <a href="https://alexdibol.github.io/[AI-PROMPTING-REALM]/" class="step-link" target="_blank" rel="noopener">Open Volume III landing page →</a>
+          <a href="https://alexdibol.github.io/ai-prompting/" class="step-link" target="_blank" rel="noopener">Open Volume III landing page →</a>
           <a href="https://github.com/alexdibol/ai-prompting" class="step-link" target="_blank" rel="noopener">Open repository →</a>
         </div>
       </div>
@@ -861,8 +857,8 @@
         <div class="step-title">If You Are a Senior Professional</div>
         <p class="step-body">Begin with the governance maturity realm and then enter the domain-specific repositories that match your institutional context.</p>
         <div class="step-links">
-          <a href="https://alexdibol.github.io/[GOVERNANCE-MATURITY-REALM]/" class="step-link" target="_blank" rel="noopener">Open Volume V landing page →</a>
-          <a href="https://github.com/alexdibol/[GOVERNANCE-MATURITY-REPO]" class="step-link" target="_blank" rel="noopener">Open repository →</a>
+          <a href="https://alexdibol.github.io/ai-governance_first/" class="step-link" target="_blank" rel="noopener">Open Volume V landing page →</a>
+          <a href="https://github.com/alexdibol/ai-governance_first" class="step-link" target="_blank" rel="noopener">Open repository →</a>
         </div>
       </div>
     </div>
@@ -871,17 +867,20 @@
   <section class="cta-section">
     <div class="cta-label">Open Access · GitHub Realms · Repositories · Books · Notebooks</div>
     <h2 class="cta-headline">Do not start with a file.<br>Start with the map.</h2>
-    <p class="cta-sub">Open the realm landing page first. Then move into the repository and the learning assets in the intended order.</p>
+    <p class="cta-sub">Open the main landing page first. Then move into the repository and the learning assets in the intended order.</p>
     <div class="cta-buttons">
-      <a href="https://alexdibol.github.io/[COURSE-REALM]/" class="btn-primary" target="_blank" rel="noopener">Open Realm Landing Page →</a>
-      <a href="https://github.com/alexdibol/[COURSE-REPOSITORY]" class="btn-secondary" target="_blank" rel="noopener">Open Repository →</a>
+      <a href="https://alexdibol.github.io/ai-self_teaching/" class="btn-primary" target="_blank" rel="noopener">Open Realm Landing Page →</a>
+      <a href="https://github.com/alexdibol/ai-self_teaching" class="btn-secondary" target="_blank" rel="noopener">Open Repository →</a>
     </div>
   </section>
 
   <footer>
     <span class="footer-brand">AI for Financial Professionals</span>
-    <span class="footer-note">Open-access educational materials organized through GitHub realm pages, repositories, releases, and runnable notebooks</span>
-    <a href="https://github.com/alexdibol" class="footer-link" target="_blank" rel="noopener">github.com/alexdibol →</a>
+    <span class="footer-note">© 2026 Alejandro Reynoso · Open-access educational materials organized through GitHub realm pages, repositories, releases, and runnable notebooks · Released under the MIT License</span>
+    <div class="footer-links">
+      <a href="https://github.com/alexdibol" class="footer-link" target="_blank" rel="noopener">GitHub Profile →</a>
+      <a href="https://mit-license.org/" class="footer-link" target="_blank" rel="noopener">MIT License →</a>
+    </div>
   </footer>
 
 </body>
