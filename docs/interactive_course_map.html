@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI for Financial Professionals — Course Map</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f9f8f6;color:#1a1a18;padding:2rem;min-height:100vh}
+  .bm{max-width:760px;margin:0 auto}
+  .bm-header{margin-bottom:1.5rem}
+  .bm-title{font-size:16px;font-weight:500;color:#1a1a18;line-height:1.45;margin-bottom:6px}
+  .bm-meta{font-size:12px;color:#73726c;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .bm-badge{font-size:11px;padding:2px 8px;border-radius:20px;background:#eceae4;color:#73726c}
+  .bm-controls{display:flex;gap:6px;margin-top:10px}
+  .bm-controls button{font-size:11px;padding:3px 10px;border-radius:6px;border:0.5px solid #c8c6be;background:#fff;color:#73726c;cursor:pointer;transition:background .15s}
+  .bm-controls button:hover{background:#f0eeea}
+  .vol-card{border:0.5px solid #dddbd3;border-radius:10px;margin-bottom:6px;background:#fff;overflow:hidden}
+  .vol-head{display:flex;align-items:center;gap:10px;padding:9px 14px;cursor:pointer;user-select:none;border-left:3px solid var(--vc)}
+  .vol-head:hover{background:#f5f4f0}
+  .vol-lbl{font-size:10px;font-weight:500;color:#888780;text-transform:uppercase;letter-spacing:.06em;flex-shrink:0;min-width:58px}
+  .vol-ttl{font-size:13px;font-weight:500;color:#1a1a18;flex:1}
+  .vol-cnt{font-size:10px;padding:2px 7px;border-radius:20px;background:#f0eeea;color:#888780;flex-shrink:0}
+  .chev{width:14px;height:14px;flex-shrink:0;color:#b4b2a9;transition:transform .18s;stroke:currentColor;fill:none}
+  .chev.o{transform:rotate(90deg)}
+  .vol-body{display:none;border-top:0.5px solid #dddbd3}
+  .vol-body.o{display:block}
+  .ch-item{display:flex;align-items:baseline;gap:8px;padding:5px 14px 5px 20px;cursor:pointer}
+  .ch-item:hover{background:#f5f4f0}
+  .ch-n{font-size:10px;color:#b4b2a9;min-width:26px;flex-shrink:0;font-variant-numeric:tabular-nums}
+  .ch-t{font-size:12px;color:#73726c;line-height:1.4}
+  .ch-t.first{color:#1a1a18;font-weight:500}
+  .sv-head{display:flex;align-items:center;gap:8px;padding:7px 14px;cursor:pointer;border-top:0.5px solid #dddbd3;background:#f5f4f0}
+  .sv-head:hover{background:#eceae4}
+  .sv-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+  .sv-lbl{font-size:10px;font-weight:500;color:#888780;min-width:28px}
+  .sv-ttl{font-size:12px;font-weight:500;color:#1a1a18;flex:1}
+  .sv-cnt{font-size:10px;padding:1px 6px;border-radius:20px;background:#fff;color:#888780}
+  .sv-body{display:none}
+  .sv-body.o{display:block}
+  .sv-item{display:flex;align-items:baseline;gap:8px;padding:5px 14px 5px 32px;cursor:pointer}
+  .sv-item:hover{background:#f5f4f0}
+</style>
+</head>
+<body>
+<div class="bm">
+<div class="bm-header">
+  <p class="bm-title">AI for Financial Professionals: Architecture, Governance, and Institutional Practice</p>
+  <div class="bm-meta">
+    <span>Alejandro Reynoso · 2026</span>
+    <span class="bm-badge">6 volumes</span>
+    <span class="bm-badge">8 subvolumes</span>
+    <span class="bm-badge">69 chapters</span>
+  </div>
+  <div class="bm-controls">
+    <button onclick="expandAll()">Expand all</button>
+    <button onclick="collapseAll()">Collapse all</button>
+  </div>
+</div>
+<div id="root"></div>
+</div>
+
+<script>
+const V=[
+{id:'v0',label:'Preface',title:'Presentation of the course',color:'#888780',chapters:[
+  {n:'—',t:'Purpose and educational philosophy'},
+  {n:'—',t:'Why financial professionals need a different AI course'},
+  {n:'—',t:'The multilevel structure of the course'},
+  {n:'—',t:'The course as a self-teaching tool'},
+  {n:'—',t:'The architecture of the curriculum'},
+  {n:'—',t:'What the learner gains'},
+]},
+{id:'v1',label:'Volume 1',title:'AI Infrastructure',color:'#378ADD',chapters:[
+  {n:'0',t:'The AI industrial base and the financial logic of modern intelligence'},
+  {n:'1',t:'AI infrastructure as capital, constraint, and governed capability'},
+  {n:'2',t:'The industrial organization of AI: value capture, governance, and strategic diligence'},
+  {n:'3',t:'A practical assembly manual for AI infrastructure'},
+]},
+{id:'v2',label:'Volume 2',title:'AI and ML 101',color:'#1D9E75',chapters:[
+  {n:'0',t:'Synthetic foundations and the mechanical literacy of machine intelligence'},
+  {n:'1',t:'The mechanics of learning: geometry-first classification'},
+  {n:'2',t:'Learned nonlinear function approximation: dense neural networks'},
+  {n:'3',t:'Spatial inductive bias and convolutional neural networks'},
+  {n:'4',t:'Recurrent neural networks and temporal memory'},
+  {n:'5',t:'Controlled memory and LSTMs: engineering retention'},
+  {n:'6',t:'Transformers and global contextual routing'},
+  {n:'7',t:'Generative adversarial networks and adversarial distribution learning'},
+  {n:'8',t:'Diffusion models and iterative scenario construction'},
+  {n:'9',t:'Graph neural networks and relational learning'},
+  {n:'10',t:'Genetic algorithms and architecture evolution as meta-optimization'},
+]},
+{id:'v3',label:'Volume 3',title:'Introduction to Prompt Engineering',color:'#7F77DD',chapters:[
+  {n:'0',t:'Prompt engineering as governance: the discipline of controlled generation'},
+  {n:'1',t:'Prompt contracts, deterministic gates, and fail-closed generation'},
+  {n:'2',t:'Schema-first prompting and board-reviewable AI artifacts'},
+  {n:'3',t:'Context packing under governance: evidence boundaries and parsing controls'},
+  {n:'4',t:'Multi-pass prompting: draft, critique, revise, and escalate'},
+  {n:'5',t:'AI prompting as governance: numeric grounding and artifact-based accountability'},
+]},
+{id:'v4',label:'Volume 4',title:'AI Agents',color:'#D85A30',chapters:[
+  {n:'0',t:'Agentic systems under governance: from synthetic autonomy to controlled workflows'},
+  {n:'1',t:'Modular agent architectures for financial reasoning'},
+  {n:'2',t:'Multi-agent financial reasoning under governance'},
+  {n:'3',t:'Orchestrating auditable agentic workflows in finance'},
+]},
+{id:'v5',label:'Volume 5',title:'Governance Maturity and AI Operating Models',color:'#BA7517',chapters:[
+  {n:'0',t:'Governance maturity in generative AI: from experimental use to institutional operating model'},
+  {n:'1',t:'Chatbots in legal practice: the level 1 playbook'},
+  {n:'2',t:'Structured reasoning in accounting and audit: the level 2 playbook'},
+  {n:'3',t:'AI agents in wealth management: the level 3 playbook'},
+  {n:'4',t:'Reusable AI assets and internal infrastructure: the level 4 playbook'},
+  {n:'5',t:'The governed operating model: level 5 GenAI in investment banking'},
+]},
+{id:'v6',label:'Volume 6',title:'Modern AI',color:'#4A8C1C',intro:{n:'0',t:'Towards implementable innovation'},
+subvolumes:[
+  {id:'sv61',label:'6.1',title:'Reasoning models',color:'#378ADD',chapters:[
+    {n:'1',t:'Deterministic chain reasoning and board-reviewable inference'},
+    {n:'2',t:'Tree reasoning under governance: controlled branching'},
+    {n:'3',t:'Loop reasoning under governance: iterative, auditable inference'},
+    {n:'4',t:'Committee reasoning: multi-role deliberation and dissent preservation'},
+    {n:'5',t:'Trainable reasoning: controlled pipelines and regression gates'},
+  ]},
+  {id:'sv62',label:'6.2',title:'Models with long context and memory',color:'#1D9E75',chapters:[
+    {n:'1',t:'Memory is state: long context, temporal control, and limits of retrieval'},
+    {n:'2',t:'Context as geometry: governed retrieval, compression, and infinite windows'},
+    {n:'3',t:'Temporal intelligence, memory compression, and governed state in agents'},
+  ]},
+  {id:'sv63',label:'6.3',title:'Fine-tuning generative models',color:'#7F77DD',chapters:[
+    {n:'1',t:'Consistency engineering and the governance logic of fine-tuning'},
+    {n:'2',t:'Behavioral fine-tuning, epistemic fidelity, and the audit-grade blueprint'},
+    {n:'3',t:'Guardrailed reasoning and predictable restraint in fine-tuned AI'},
+    {n:'4',t:'Governable reasoning and restraint as a trained capability'},
+    {n:'5',t:'Bounded AI and governance engineering in high-disclosure finance'},
+  ]},
+  {id:'sv64',label:'6.4',title:'AI Surrogates',color:'#D85A30',chapters:[
+    {n:'0',t:'Surrogacy, control, and the architecture of financial intelligence'},
+    {n:'1',t:'Proxy objectives, controlled agents, and the feasibility logic of surrogacy'},
+    {n:'2',t:'Surrogate agents under optimization pressure: Goodhart dynamics'},
+    {n:'3',t:'Constrained surrogate control: from optimization to mandates'},
+  ]},
+  {id:'sv65',label:'6.5',title:'AI Multimodal',color:'#C04875',chapters:[
+    {n:'1',t:'Multimodality by construction: geometry, alignment, and governed representation'},
+    {n:'2',t:'Failure geometry in multimodal systems: dominance and spurious alignment'},
+    {n:'3',t:'Multimodal lifecycle governance: drift, collapse, and auditability'},
+  ]},
+  {id:'sv66',label:'6.6',title:'AI Bayesian Models',color:'#BA7517',chapters:[
+    {n:'1',t:'Bayesian inference under governance: priors, likelihoods, and financial uncertainty'},
+    {n:'2',t:'Bayesian learning in financial systems: updating beliefs and regimes'},
+    {n:'3',t:'Bayesian governance and model risk: auditability, drift, and institutional use'},
+  ]},
+  {id:'sv67',label:'6.7',title:'AI Diffusion Models',color:'#4A8C1C',chapters:[
+    {n:'1',t:'Diffusion foundations for multimodal finance: noise, reconstruction, and controlled generation'},
+    {n:'2',t:'Multimodal diffusion architectures: cross-modal conditioning and latent spaces'},
+    {n:'3',t:'Governing multimodal diffusion systems: reliability, provenance, and deployment'},
+  ]},
+  {id:'sv68',label:'6.8',title:'Frontier Topics',color:'#888780',chapters:[
+    {n:'0',t:'Frontier awareness without the hype'},
+    {n:'1',t:'From benchmark theater to controlled agency: what the 2025 frontier changed'},
+    {n:'2',t:'Self-generated alignment and the frontier of safe reasoning'},
+    {n:'3',t:'Mechanistic interpretability, monosemantic features, and transparent AI'},
+    {n:'4',t:'Breaking the context barrier: retrieval-aware long-context architectures'},
+    {n:'5',t:'Forest-of-thought, sparse activation, and structured reasoning'},
+    {n:'6',t:'Scientific agents, decentralized trust, and verifiable autonomy'},
+    {n:'7',t:'Physics-informed AI, hard constraints, and trustworthy scientific surrogates'},
+    {n:'8',t:'Systemic risk, explainability limits, and the governance frontier'},
+    {n:'9',t:'Professionalization, trust, and institutional AI adoption'},
+    {n:'10',t:'Unified multimodal systems, embodied action, and the governance crisis'},
+  ]},
+]}
+];
+
+function chCount(v){if(v.subvolumes){let c=v.intro?1:0;v.subvolumes.forEach(sv=>c+=sv.chapters.length);return c;}return v.chapters.length;}
+
+function chevSVG(cls){return`<svg class="${cls}" viewBox="0 0 14 14"><path d="M4 2.5l5 4.5-5 4.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;}
+
+function renderRegular(v){
+  const chs=v.chapters.map((c,i)=>`<div class="ch-item"><span class="ch-n">${c.n!=='—'?'Ch '+c.n:''}</span><span class="ch-t${i===0&&v.id!=='v0'?' first':''}">${c.t}</span></div>`).join('');
+  return`<div class="vol-card" id="${v.id}">
+<div class="vol-head" style="--vc:${v.color}" onclick="tv('${v.id}',this)">
+  <span class="vol-lbl">${v.label}</span>
+  <span class="vol-ttl">${v.title}</span>
+  <span class="vol-cnt">${chCount(v)} ch</span>
+  ${chevSVG('chev')}
+</div>
+<div class="vol-body" id="${v.id}-b">${chs}</div>
+</div>`;}
+
+function renderV6(v){
+  let body=v.intro?`<div class="ch-item"><span class="ch-n">Ch ${v.intro.n}</span><span class="ch-t first">${v.intro.t}</span></div>`:'';
+  v.subvolumes.forEach(sv=>{
+    const chs=sv.chapters.map(c=>`<div class="sv-item"><span class="ch-n">Ch ${c.n}</span><span class="ch-t">${c.t}</span></div>`).join('');
+    body+=`<div><div class="sv-head" onclick="tsv('${sv.id}',this)"><div class="sv-dot" style="background:${sv.color}"></div><span class="sv-lbl">SV ${sv.label}</span><span class="sv-ttl">${sv.title}</span><span class="sv-cnt">${sv.chapters.length} ch</span>${chevSVG('chev')}</div><div class="sv-body" id="${sv.id}-b">${chs}</div></div>`;
+  });
+  return`<div class="vol-card" id="${v.id}">
+<div class="vol-head" style="--vc:${v.color}" onclick="tv('${v.id}',this)">
+  <span class="vol-lbl">${v.label}</span>
+  <span class="vol-ttl">${v.title}</span>
+  <span class="vol-cnt">${chCount(v)} ch</span>
+  ${chevSVG('chev')}
+</div>
+<div class="vol-body" id="${v.id}-b">${body}</div>
+</div>`;}
+
+document.getElementById('root').innerHTML=V.map(v=>v.subvolumes?renderV6(v):renderRegular(v)).join('');
+
+function tv(id,h){
+  const b=document.getElementById(id+'-b');
+  b.classList.toggle('o');
+  h.querySelector('.chev').classList.toggle('o');
+}
+function tsv(id,h){
+  const b=document.getElementById(id+'-b');
+  b.classList.toggle('o');
+  h.querySelector('.chev').classList.toggle('o');
+}
+function expandAll(){
+  document.querySelectorAll('.vol-body,.sv-body').forEach(e=>e.classList.add('o'));
+  document.querySelectorAll('.chev').forEach(e=>e.classList.add('o'));
+}
+function collapseAll(){
+  document.querySelectorAll('.vol-body,.sv-body').forEach(e=>e.classList.remove('o'));
+  document.querySelectorAll('.chev').forEach(e=>e.classList.remove('o'));
+}
+</script>
+</body>
+</html>
